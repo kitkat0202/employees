@@ -9,3 +9,9 @@ $(function() {
       };
       firebase.initializeApp(config);
 })
+
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
+
