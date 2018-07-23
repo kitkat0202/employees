@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron"></div>
+        <div class="add-section">
+            <!-- name role startdate monthly rate -->
+            <form>
+                <!-- name -->
+                <div class="form-group group">
+                    <label for="name">Employee Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="John Smith">
+                </div>
+
+                <!-- role -->
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select class="form-control" id="role">
+                    <option>CEO</option>
+                    <option>CFO</option>
+                    <option>Office Manager</option>
+                    <option>Junior Staff</option>
+                    <option>Entry Staff</option>
+                    </select>
+                </div>
+
+                <!-- start date -->
+                <div class="form-group">
+                    <label for="start-date">Start Date</label>
+                    <input type="date" class="form-control" id="start-date">
+                </div>
+
+                <!-- salary -->
+                <div class="form-group">
+                    <label for="salary">Salary</label>
+                    <input type="number" class="form-control" id="salary">
+                </div>
+                
+            </form>
+        </div>
+        <div class="current-section group"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/script.js"></script>
+</body>
+</html>
