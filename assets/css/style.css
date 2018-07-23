@@ -6,6 +6,11 @@ body, html {
     box-sizing: border-box;
     height: 100vh;
 }
+.jumbotron {
+    margin: 15px;
+    background-color: lightblue;
+    text-align: center;
+}
 
 .group {
     border: 1px solid #ccc;
