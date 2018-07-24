@@ -30,15 +30,24 @@ $("#submit").on("click", function(event) {
 });
 
 database.ref().on("child_added", function(snapshot) {
-    
     var sv = snapshot.val();
-    console.log(sv.name);
-    
-    
-    var monthWorked = 0
-    var total = 0
+    var monthRate = Math.floor(parseInt(sv.salary)/12)
 
-    $(".table tbody").append($("<tr>").addClass(count).html(`<td>${sv.name}</td><td>${sv.role}</td><td>${sv.date}</td><td>${monthWorked}</td><td>${salary/12}</td><td>${total}</td>`))
+    var monthStart = new Date (sv.date)
+    var today = new Date();
+
+    function monthDiff(d1, d2) {
+        var months;
+        months = (d2.getFullYear() - d1.getFullYear()) * 12;
+        months -= d1.getMonth() + 1;
+        months += d2.getMonth();
+        return months <= 0 ? 0 : months;
+    }
+    var monthWorked = monthDiff(monthStart, today)
+    
+    var total = monthRate * monthWorked
+
+    $(".table tbody").append($("<tr>").addClass(count).html(`<td>${sv.name}</td><td>${sv.role}</td><td>${sv.date}</td><td>${monthWorked}</td><td>${monthRate}</td><td>${total}</td>`))
     // Change the HTML to reflect
 
     // Handle the errors
